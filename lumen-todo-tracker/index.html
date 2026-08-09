@@ -1,0 +1,87 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="theme-color" content="#10142d">
+  <title>Lumen 待办追踪</title>
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="aurora" aria-hidden="true"></div>
+  <main class="app-shell">
+    <header class="hero">
+      <div class="brand-mark" aria-hidden="true">✓</div>
+      <div><p class="eyebrow">LUMEN · DAILY FOCUS</p><h1>待办事项追踪</h1><p>把今天变清晰，把完成变成可见的进度。</p></div>
+    </header>
+
+    <nav class="view-tabs" aria-label="任务视图">
+      <button class="tab active" data-view="today" aria-selected="true">📌 今日待办</button>
+      <button class="tab" data-view="timeline" aria-selected="false">▦ 日历时间线</button>
+    </nav>
+
+    <section class="stats" aria-label="任务统计">
+      <article><strong id="stat-pending">0</strong><span>待处理</span></article>
+      <article><strong id="stat-archived">0</strong><span>已确认完成</span></article>
+      <article><strong id="stat-dated">0</strong><span>有截止日</span></article>
+      <article><strong id="stat-total">0</strong><span>全部</span></article>
+    </section>
+
+    <div id="storage-warning" class="notice warning" hidden>浏览器无法保存数据；本次修改仅在当前页面有效。</div>
+    <section id="today-view" class="view-panel" aria-labelledby="today-heading">
+      <div class="section-heading"><div><p class="eyebrow">TODAY</p><h2 id="today-heading">今天的节奏</h2></div><button id="add-task" class="button primary">＋ 添加待办</button></div>
+      <div id="today-groups"></div>
+      <button id="future-hint" class="future-hint" data-view="timeline" hidden></button>
+    </section>
+    <section id="timeline-view" class="view-panel" aria-labelledby="timeline-heading" hidden>
+      <div class="section-heading"><div><p class="eyebrow">TIMELINE</p><h2 id="timeline-heading">时间线</h2></div><button class="button primary" data-action="add">＋ 添加待办</button></div>
+      <div id="timeline-groups"></div>
+    </section>
+
+    <details class="archive-panel"><summary><span>✓ 已确认完成</span><span id="archive-count">0 项</span></summary><div id="archive-list"></div></details>
+
+    <footer class="toolbar" aria-label="数据工具">
+      <span id="save-status">● 已保存到本地</span>
+      <div>
+        <button class="text-button" id="export-data">导出</button>
+        <button class="text-button" id="import-data">导入</button>
+        <input id="import-file" type="file" accept="application/json" hidden>
+        <button class="text-button" id="reset-data">重置</button>
+        <button class="text-button" id="pull-data">↓ 拉取</button>
+        <button class="text-button" id="push-data">↑ 推送</button>
+        <button class="text-button" id="open-settings">⚙ 同步设置</button>
+      </div>
+    </footer>
+  </main>
+
+  <dialog id="task-dialog" aria-labelledby="task-dialog-title">
+    <form id="task-form" method="dialog">
+      <div class="dialog-heading"><div><p class="eyebrow">TASK</p><h2 id="task-dialog-title">添加待办</h2></div><button type="button" class="icon-button" data-close="task-dialog" aria-label="关闭">×</button></div>
+      <input type="hidden" name="id">
+      <label>任务名称<input name="title" maxlength="120" required placeholder="例如：整理项目周报"></label>
+      <label>备注<textarea name="notes" rows="3" maxlength="500" placeholder="可选"></textarea></label>
+      <fieldset><legend>任务类型</legend><label class="choice"><input type="radio" name="kind" value="daily" checked> 日常待办</label><label class="choice"><input type="radio" name="kind" value="dated"> 指定日期</label></fieldset>
+      <label id="due-date-field" hidden>截止日期<input name="dueDate" type="date"></label>
+      <p id="task-error" class="form-error" role="alert"></p>
+      <div class="dialog-actions"><button type="button" class="button secondary" data-close="task-dialog">取消</button><button type="submit" class="button primary">保存任务</button></div>
+    </form>
+  </dialog>
+
+  <dialog id="settings-dialog" aria-labelledby="settings-title">
+    <form id="settings-form" method="dialog">
+      <div class="dialog-heading"><div><p class="eyebrow">GITHUB SYNC</p><h2 id="settings-title">公开仓库同步</h2></div><button type="button" class="icon-button" data-close="settings-dialog" aria-label="关闭">×</button></div>
+      <div class="notice">任务数据会公开。请勿记录密码、身份信息或其他敏感内容。</div>
+      <div class="form-grid"><label>用户名<input name="owner" required autocomplete="off"></label><label>仓库名<input name="repo" required autocomplete="off"></label></div>
+      <div class="form-grid"><label>分支<input name="branch" value="main" required></label><label>数据路径<input name="path" value="data/tasks.json" required></label></div>
+      <label>Fine-grained Token<input name="token" type="password" required autocomplete="off" placeholder="仅保存在此浏览器"></label>
+      <p class="field-note">仅授予目标仓库的 Contents: Read and write 权限。</p>
+      <p id="settings-error" class="form-error" role="alert"></p>
+      <div class="dialog-actions"><button type="button" class="button secondary" data-close="settings-dialog">取消</button><button type="submit" class="button primary">保存设置</button></div>
+    </form>
+  </dialog>
+
+  <div id="toast" class="toast" aria-live="polite" aria-atomic="true"></div>
+  <script type="module" src="js/app.js"></script>
+</body>
+</html>
