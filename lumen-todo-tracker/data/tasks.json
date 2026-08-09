@@ -1,5 +1,17 @@
 {
   "version": 1,
-  "updatedAt": "2026-08-09T00:00:00.000Z",
-  "tasks": []
+  "updatedAt": "2026-08-09T06:34:38.766Z",
+  "tasks": [
+    {
+      "id": "task_mslfgpbi_33df3162-51dc-4230-b751-a99740907e70",
+      "title": "测试",
+      "notes": "",
+      "kind": "daily",
+      "dueDate": null,
+      "status": "pending",
+      "createdAt": "2026-08-09T06:34:38.766Z",
+      "completedAt": null,
+      "archivedAt": null
+    }
+  ]
 }
