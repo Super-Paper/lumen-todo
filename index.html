@@ -1,0 +1,35 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="theme-color" content="#070b17">
+  <meta name="description" content="Super-Paper 的在线工具入口">
+  <title>工具中心 · Super-Paper</title>
+  <link rel="icon" href="hub-assets/favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="hub.css">
+</head>
+<body>
+  <div class="ambient" aria-hidden="true"></div>
+  <main class="hub-shell">
+    <header class="hub-header">
+      <div>
+        <p class="kicker"><span></span> SUPER-PAPER / TOOLBOX</p>
+        <h1>工具中心</h1>
+        <p class="intro">一些小而专注的网页工具，随时打开，直接使用。</p>
+      </div>
+      <div class="system-pill"><i aria-hidden="true"></i><span id="tool-count" aria-live="polite">正在载入目录</span></div>
+    </header>
+
+    <section aria-labelledby="tools-heading">
+      <div class="section-title"><h2 id="tools-heading">所有工具</h2><span>SELECT A UTILITY</span></div>
+      <div id="tool-grid" class="tool-grid" aria-live="polite" aria-busy="false">
+        <div class="loading-card"><span></span><span></span><span></span></div>
+      </div>
+    </section>
+
+    <footer><span>© 2026 Super-Paper</span><span>静态部署 · 数据由各工具独立管理</span></footer>
+  </main>
+  <script type="module" src="hub.js"></script>
+</body>
+</html>

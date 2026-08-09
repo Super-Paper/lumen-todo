@@ -1,0 +1,14 @@
+{
+  "version": 1,
+  "sites": [
+    {
+      "id": "lumen-todo",
+      "name": "Lumen 待办追踪",
+      "description": "管理今日任务、日历时间线与跨设备 GitHub 同步。",
+      "href": "./lumen-todo-tracker/",
+      "icon": "✓",
+      "accent": "cyan",
+      "status": "ready"
+    }
+  ]
+}
