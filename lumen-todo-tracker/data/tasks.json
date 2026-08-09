@@ -1,5 +1,17 @@
 {
   "version": 1,
-  "updatedAt": "2026-08-09T07:51:57.842Z",
-  "tasks": []
+  "updatedAt": "2026-08-09T07:55:08.017Z",
+  "tasks": [
+    {
+      "id": "task_mslic7ld_f880f244-4d0a-485b-bec8-dcd3572cd9f2",
+      "title": "小论文",
+      "notes": "",
+      "kind": "daily",
+      "dueDate": null,
+      "status": "pending",
+      "createdAt": "2026-08-09T07:55:08.017Z",
+      "completedAt": null,
+      "archivedAt": null
+    }
+  ]
 }
