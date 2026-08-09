@@ -1,17 +1,5 @@
 {
   "version": 1,
-  "updatedAt": "2026-08-09T07:50:51.019Z",
-  "tasks": [
-    {
-      "id": "task_msli6pah_cf87347c-a417-4ab5-8bff-fa3ff16ceb01",
-      "title": "Qq",
-      "notes": "Fehbebene",
-      "kind": "daily",
-      "dueDate": null,
-      "status": "pending",
-      "createdAt": "2026-08-09T07:50:51.017Z",
-      "completedAt": null,
-      "archivedAt": null
-    }
-  ]
+  "updatedAt": "2026-08-09T07:51:57.842Z",
+  "tasks": []
 }
