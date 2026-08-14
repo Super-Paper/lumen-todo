@@ -1,10 +1,10 @@
 {
   "version": 1,
-  "updatedAt": "2026-08-09T15:28:54.114Z",
+  "updatedAt": "2026-08-14T04:14:13.175Z",
   "tasks": [
     {
       "id": "task_mslic7ld_f880f244-4d0a-485b-bec8-dcd3572cd9f2",
-      "title": "小论文",
+      "title": "小论文修改",
       "notes": "",
       "kind": "daily",
       "dueDate": null,
@@ -21,6 +21,39 @@
       "dueDate": null,
       "status": "pending",
       "createdAt": "2026-08-09T15:28:54.114Z",
+      "completedAt": null,
+      "archivedAt": null
+    },
+    {
+      "id": "task_mssfmlf1_200d6b54-83ad-4e29-903f-7c3afbd7e3f9",
+      "title": "第二篇小论文大纲、可行性",
+      "notes": "",
+      "kind": "daily",
+      "dueDate": null,
+      "status": "pending",
+      "createdAt": "2026-08-14T04:13:36.877Z",
+      "completedAt": null,
+      "archivedAt": null
+    },
+    {
+      "id": "task_mssfmzwh_b8187503-e269-4410-aad1-4b7876ea445c",
+      "title": "项目移植工作准备",
+      "notes": "",
+      "kind": "daily",
+      "dueDate": null,
+      "status": "pending",
+      "createdAt": "2026-08-14T04:13:55.649Z",
+      "completedAt": null,
+      "archivedAt": null
+    },
+    {
+      "id": "task_mssfndfa_e79122d1-ad64-46e7-8273-4fe834a6491d",
+      "title": "决策优化文献的复现",
+      "notes": "",
+      "kind": "daily",
+      "dueDate": null,
+      "status": "pending",
+      "createdAt": "2026-08-14T04:14:13.174Z",
       "completedAt": null,
       "archivedAt": null
     }
